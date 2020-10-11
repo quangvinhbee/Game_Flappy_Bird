@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var person = {
+            name: null,
+            age: 21,
+            fb: null
+
+        }
+
+        var hello = {
+            x: 5,
+            run: function () {
+                for(var i=0; i<arguments.length; i++){
+                    document.write(`${arguments[i]} <br>  `);
+                }
+
+            }
+        };
+
+        var cat = {
+            name: 'Mun',
+            job: 'Hái cau',
+            bio: 'Chơi là chính, ngủ là chủ yếu, việc thì bỏ bê',
+            rating: 1,
+            voice: function () {
+                return 'mimi mimi';
+            },
+            tags: ['màu trắng', 'lùn', 'hơi nhác'],
+        };
+
+        var markup = `
+            <div class="cat">
+                <h2>${cat.name}</h2>
+                <p class="job">${cat.job}</p>
+                <p class="bio">${cat.bio}</p>
+                <p class="star">${cat.rating}*</p>
+                <p class="voice">${cat.voice()}</p>
+                <p class="tags">
+                    ${cat.tags.map(tag => ` <span>${tag}</span>`)}
+                </p>
+            </div>
+        `;
+    document.write(markup);
+
+    </script>
+</head>
+
+<body onload="hello.run(32,23,23,543,56,23,65,87,34)">
+    <div id="loby">
+
+    </div>
+</body>
+
+</html>
